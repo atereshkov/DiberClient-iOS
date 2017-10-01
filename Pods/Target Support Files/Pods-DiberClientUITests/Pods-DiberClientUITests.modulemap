@@ -1,0 +1,6 @@
+framework module Pods_DiberClientUITests {
+  umbrella header "Pods-DiberClientUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

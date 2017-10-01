@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39B140297ED23C5EABA6EF19 /* Pods_DiberClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9A300066A84B6730F825E0 /* Pods_DiberClient.framework */; };
+		487FCC58CF9932558061F9FD /* Pods_DiberClientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4B02FECCF3761634B7AA20 /* Pods_DiberClientUITests.framework */; };
+		9BA74188C5B8EBE850B00F0A /* Pods_DiberClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D2BD52AA740F076077303C /* Pods_DiberClientTests.framework */; };
 		A3D7A2581F81314B00B4BB86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A2571F81314B00B4BB86 /* AppDelegate.swift */; };
 		A3D7A25A1F81314B00B4BB86 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A2591F81314B00B4BB86 /* FirstViewController.swift */; };
 		A3D7A25C1F81314B00B4BB86 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A25B1F81314B00B4BB86 /* SecondViewController.swift */; };
@@ -36,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01B92106EC0EC7820ABA9310 /* Pods-DiberClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClientTests/Pods-DiberClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F4B02FECCF3761634B7AA20 /* Pods_DiberClientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiberClientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5809E4997365EE6F0F3D7C50 /* Pods-DiberClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClient/Pods-DiberClient.release.xcconfig"; sourceTree = "<group>"; };
+		6D9A300066A84B6730F825E0 /* Pods_DiberClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiberClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		703BE3A45AFF8FC71BFB107A /* Pods-DiberClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClient/Pods-DiberClient.debug.xcconfig"; sourceTree = "<group>"; };
 		A3D7A2541F81314B00B4BB86 /* DiberClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiberClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D7A2571F81314B00B4BB86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3D7A2591F81314B00B4BB86 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +59,10 @@
 		A3D7A2791F81314B00B4BB86 /* DiberClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiberClientUITests.swift; sourceTree = "<group>"; };
 		A3D7A27B1F81314B00B4BB86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3D7A2871F813B0500B4BB86 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		A56A34FBF1C676B85478E553 /* Pods-DiberClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClientTests/Pods-DiberClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		B0D2BD52AA740F076077303C /* Pods_DiberClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiberClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F38CF4385202BC90C3920B62 /* Pods-DiberClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClientUITests/Pods-DiberClientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F3DBD3D2D2AECBF3BC33A70D /* Pods-DiberClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClientUITests/Pods-DiberClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39B140297ED23C5EABA6EF19 /* Pods_DiberClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA74188C5B8EBE850B00F0A /* Pods_DiberClientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				487FCC58CF9932558061F9FD /* Pods_DiberClientUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DB61177DD3E612350C27450 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D9A300066A84B6730F825E0 /* Pods_DiberClient.framework */,
+				B0D2BD52AA740F076077303C /* Pods_DiberClientTests.framework */,
+				4F4B02FECCF3761634B7AA20 /* Pods_DiberClientUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D201DA5A63225471B632E6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				703BE3A45AFF8FC71BFB107A /* Pods-DiberClient.debug.xcconfig */,
+				5809E4997365EE6F0F3D7C50 /* Pods-DiberClient.release.xcconfig */,
+				01B92106EC0EC7820ABA9310 /* Pods-DiberClientTests.debug.xcconfig */,
+				A56A34FBF1C676B85478E553 /* Pods-DiberClientTests.release.xcconfig */,
+				F3DBD3D2D2AECBF3BC33A70D /* Pods-DiberClientUITests.debug.xcconfig */,
+				F38CF4385202BC90C3920B62 /* Pods-DiberClientUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A3D7A24B1F81314B00B4BB86 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +123,8 @@
 				A3D7A26D1F81314B00B4BB86 /* DiberClientTests */,
 				A3D7A2781F81314B00B4BB86 /* DiberClientUITests */,
 				A3D7A2551F81314B00B4BB86 /* Products */,
+				5D201DA5A63225471B632E6D /* Pods */,
+				4DB61177DD3E612350C27450 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3D7A27E1F81314B00B4BB86 /* Build configuration list for PBXNativeTarget "DiberClient" */;
 			buildPhases = (
+				0A5E7C3F91D456E4BCCF3691 /* [CP] Check Pods Manifest.lock */,
 				A3D7A2501F81314B00B4BB86 /* Sources */,
 				A3D7A2511F81314B00B4BB86 /* Frameworks */,
 				A3D7A2521F81314B00B4BB86 /* Resources */,
+				21918CBB6D4C07455A22C0BA /* [CP] Embed Pods Frameworks */,
+				C9B61D61AA0D9A1B49CBFD0C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3D7A2811F81314B00B4BB86 /* Build configuration list for PBXNativeTarget "DiberClientTests" */;
 			buildPhases = (
+				CE5AB484291510BA61890580 /* [CP] Check Pods Manifest.lock */,
 				A3D7A2661F81314B00B4BB86 /* Sources */,
 				A3D7A2671F81314B00B4BB86 /* Frameworks */,
 				A3D7A2681F81314B00B4BB86 /* Resources */,
+				5B4D02940547D21066CE443D /* [CP] Embed Pods Frameworks */,
+				DB16965CFA895CBE3880E240 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3D7A2841F81314B00B4BB86 /* Build configuration list for PBXNativeTarget "DiberClientUITests" */;
 			buildPhases = (
+				B0B79E5FF7F1CE46C6291A87 /* [CP] Check Pods Manifest.lock */,
 				A3D7A2711F81314B00B4BB86 /* Sources */,
 				A3D7A2721F81314B00B4BB86 /* Frameworks */,
 				A3D7A2731F81314B00B4BB86 /* Resources */,
+				333A5A3C6C2DC185A5024875 /* [CP] Embed Pods Frameworks */,
+				0727649081CAFD0FF2087A97 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +308,162 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0727649081CAFD0FF2087A97 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiberClientUITests/Pods-DiberClientUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A5E7C3F91D456E4BCCF3691 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiberClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21918CBB6D4C07455A22C0BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DiberClient/Pods-DiberClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AsyncSwift/Async.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Async.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiberClient/Pods-DiberClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		333A5A3C6C2DC185A5024875 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiberClientUITests/Pods-DiberClientUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B4D02940547D21066CE443D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiberClientTests/Pods-DiberClientTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0B79E5FF7F1CE46C6291A87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiberClientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9B61D61AA0D9A1B49CBFD0C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiberClient/Pods-DiberClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE5AB484291510BA61890580 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiberClientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB16965CFA895CBE3880E240 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiberClientTests/Pods-DiberClientTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3D7A2501F81314B00B4BB86 /* Sources */ = {
@@ -420,6 +625,7 @@
 		};
 		A3D7A27F1F81314B00B4BB86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 703BE3A45AFF8FC71BFB107A /* Pods-DiberClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DiberClient/Info.plist;
@@ -432,6 +638,7 @@
 		};
 		A3D7A2801F81314B00B4BB86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5809E4997365EE6F0F3D7C50 /* Pods-DiberClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DiberClient/Info.plist;
@@ -444,6 +651,7 @@
 		};
 		A3D7A2821F81314B00B4BB86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01B92106EC0EC7820ABA9310 /* Pods-DiberClientTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +666,7 @@
 		};
 		A3D7A2831F81314B00B4BB86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A56A34FBF1C676B85478E553 /* Pods-DiberClientTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -472,6 +681,7 @@
 		};
 		A3D7A2851F81314B00B4BB86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3DBD3D2D2AECBF3BC33A70D /* Pods-DiberClientUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = DiberClientUITests/Info.plist;
@@ -485,6 +695,7 @@
 		};
 		A3D7A2861F81314B00B4BB86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F38CF4385202BC90C3920B62 /* Pods-DiberClientUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = DiberClientUITests/Info.plist;
