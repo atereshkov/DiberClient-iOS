@@ -52,7 +52,7 @@
         <!--Third-->
         <scene sceneID="Our-rO-4eA">
             <objects>
-                <viewController id="9s8-Aq-b5Z" sceneMemberID="viewController">
+                <viewController id="9s8-Aq-b5Z" customClass="ThirdViewController" customModule="DiberClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LAE-XI-djM"/>
                         <viewControllerLayoutGuide type="bottom" id="umR-Nb-pR6"/>
