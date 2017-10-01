@@ -15,6 +15,7 @@
 		A3D7A2641F81314B00B4BB86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3D7A2621F81314B00B4BB86 /* LaunchScreen.storyboard */; };
 		A3D7A26F1F81314B00B4BB86 /* DiberClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A26E1F81314B00B4BB86 /* DiberClientTests.swift */; };
 		A3D7A27A1F81314B00B4BB86 /* DiberClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A2791F81314B00B4BB86 /* DiberClientUITests.swift */; };
+		A3D7A2881F813B0500B4BB86 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A2871F813B0500B4BB86 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A3D7A2751F81314B00B4BB86 /* DiberClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiberClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D7A2791F81314B00B4BB86 /* DiberClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiberClientUITests.swift; sourceTree = "<group>"; };
 		A3D7A27B1F81314B00B4BB86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3D7A2871F813B0500B4BB86 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				A3D7A2571F81314B00B4BB86 /* AppDelegate.swift */,
 				A3D7A2591F81314B00B4BB86 /* FirstViewController.swift */,
 				A3D7A25B1F81314B00B4BB86 /* SecondViewController.swift */,
+				A3D7A2871F813B0500B4BB86 /* ThirdViewController.swift */,
 				A3D7A25D1F81314B00B4BB86 /* Main.storyboard */,
 				A3D7A2601F81314B00B4BB86 /* Assets.xcassets */,
 				A3D7A2621F81314B00B4BB86 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				A3D7A25C1F81314B00B4BB86 /* SecondViewController.swift in Sources */,
 				A3D7A2581F81314B00B4BB86 /* AppDelegate.swift in Sources */,
+				A3D7A2881F813B0500B4BB86 /* ThirdViewController.swift in Sources */,
 				A3D7A25A1F81314B00B4BB86 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
