@@ -30,6 +30,8 @@
 		A3DF20A81F8A29F2003D94AD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF20A71F8A29F2003D94AD /* Order.swift */; };
 		A3DF20AA1F8A29FA003D94AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF20A91F8A29FA003D94AD /* User.swift */; };
 		A3E2266A1F92A1DE003FE7D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E226691F92A1DE003FE7D9 /* Constants.swift */; };
+		A3E2266C1F92A7DC003FE7D9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2266B1F92A7DC003FE7D9 /* AuthService.swift */; };
+		A3E2266E1F92B189003FE7D9 /* AlertControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2266D1F92B188003FE7D9 /* AlertControllerHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		A3DF20A71F8A29F2003D94AD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A3DF20A91F8A29FA003D94AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A3E226691F92A1DE003FE7D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A3E2266B1F92A7DC003FE7D9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A3E2266D1F92B188003FE7D9 /* AlertControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerHelper.swift; sourceTree = "<group>"; };
 		A56A34FBF1C676B85478E553 /* Pods-DiberClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClientTests/Pods-DiberClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		B0D2BD52AA740F076077303C /* Pods_DiberClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiberClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38CF4385202BC90C3920B62 /* Pods-DiberClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClientUITests/Pods-DiberClientUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 		A37C13E41F8A481100BFF747 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A3E2266B1F92A7DC003FE7D9 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				A3E226691F92A1DE003FE7D9 /* Constants.swift */,
+				A3E2266D1F92B188003FE7D9 /* AlertControllerHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 			files = (
 				A3D7A25C1F81314B00B4BB86 /* AddressesVC.swift in Sources */,
 				A3D7A2581F81314B00B4BB86 /* AppDelegate.swift in Sources */,
+				A3E2266E1F92B189003FE7D9 /* AlertControllerHelper.swift in Sources */,
 				A3DF20AA1F8A29FA003D94AD /* User.swift in Sources */,
 				A37C13E31F8A480700BFF747 /* NetworkManager.swift in Sources */,
 				A37C13EB1F8A488300BFF747 /* ReachabilityManager.swift in Sources */,
@@ -604,6 +611,7 @@
 				A37C13ED1F8A49C200BFF747 /* ApiEndpoint.swift in Sources */,
 				A3D7A2881F813B0500B4BB86 /* ProfileVC.swift in Sources */,
 				A36EABD81F927698007DA6D2 /* LoginVC.swift in Sources */,
+				A3E2266C1F92A7DC003FE7D9 /* AuthService.swift in Sources */,
 				A3D7A25A1F81314B00B4BB86 /* OrdersVC.swift in Sources */,
 				A37C13E61F8A482F00BFF747 /* OAuth2Handler.swift in Sources */,
 			);

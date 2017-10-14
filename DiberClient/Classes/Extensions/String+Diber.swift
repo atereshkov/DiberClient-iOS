@@ -10,12 +10,12 @@ import UIKit
 
 extension String {
     
-    func substring(from: Int) -> String {
-        return substring(from: index(startIndex, offsetBy: from))
+    func trim() -> String {
+        return self.trimmingCharacters(in: CharacterSet.whitespaces)
     }
     
-    func substring(to: Int) -> String {
-        return substring(to: index(startIndex, offsetBy: to))
+    func contains(string: String) -> Bool{
+        return (self.range(of: string) != nil) ? true : false
     }
     
 }

@@ -59,7 +59,6 @@ class OAuth2Handler: RequestAdapter, RequestRetrier {
     
     private func refreshTokens(completion: @escaping RefreshCompletion) {
         guard !isRefreshing else { return }
-        
         isRefreshing = true
         
         let url = ApiEndpoint.auth.url()

@@ -97,6 +97,8 @@
                         <viewLayoutGuide key="safeArea" id="vZ5-Hu-3kV"/>
                     </view>
                     <connections>
+                        <outlet property="loginField" destination="rB5-jt-9w8" id="ZIX-mL-Nb6"/>
+                        <outlet property="passwordField" destination="B4G-Dj-o4l" id="nuE-MV-8HB"/>
                         <segue destination="aik-Fa-wVX" kind="show" identifier="MainScreen" id="3GO-Wu-O9R"/>
                     </connections>
                 </viewController>
