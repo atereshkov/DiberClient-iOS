@@ -17,7 +17,6 @@
         <!--Orders-->
         <scene sceneID="M6g-Hz-gR6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3k1-Me-DyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="HEw-PU-5Qx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Orders" id="X54-YY-HMK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9L4-R6-K3Y">
@@ -30,13 +29,13 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="7HR-9g-QCi"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3k1-Me-DyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="900" y="-761"/>
         </scene>
         <!--Orders-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <viewController id="9pv-A4-QxB" customClass="OrdersVC" customModule="DiberClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
@@ -45,13 +44,36 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GsX-GG-UTQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="z3a-9t-td1">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z3a-9t-td1" id="yPf-yG-4Tg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="GsX-GG-UTQ" secondAttribute="bottom" id="0d1-fI-vzM"/>
+                            <constraint firstItem="GsX-GG-UTQ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="Mwq-xY-lgk"/>
+                            <constraint firstItem="GsX-GG-UTQ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="bkD-b1-R8n"/>
+                            <constraint firstAttribute="trailing" secondItem="GsX-GG-UTQ" secondAttribute="trailing" id="r5f-Jx-VwQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Orders" image="first" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="dAd-Tw-nF7">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="c2N-GT-MJW"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1696.8" y="-760.56971514242889"/>
         </scene>

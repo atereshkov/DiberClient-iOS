@@ -27,11 +27,17 @@
 		A3D7A26F1F81314B00B4BB86 /* DiberClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A26E1F81314B00B4BB86 /* DiberClientTests.swift */; };
 		A3D7A27A1F81314B00B4BB86 /* DiberClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A2791F81314B00B4BB86 /* DiberClientUITests.swift */; };
 		A3D7A2881F813B0500B4BB86 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A2871F813B0500B4BB86 /* ProfileVC.swift */; };
-		A3DF20A81F8A29F2003D94AD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF20A71F8A29F2003D94AD /* Order.swift */; };
-		A3DF20AA1F8A29FA003D94AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF20A91F8A29FA003D94AD /* User.swift */; };
 		A3E2266A1F92A1DE003FE7D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E226691F92A1DE003FE7D9 /* Constants.swift */; };
 		A3E2266C1F92A7DC003FE7D9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2266B1F92A7DC003FE7D9 /* AuthService.swift */; };
 		A3E2266E1F92B189003FE7D9 /* AlertControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2266D1F92B188003FE7D9 /* AlertControllerHelper.swift */; };
+		A3E226701F92C630003FE7D9 /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2266F1F92C630003FE7D9 /* OrderService.swift */; };
+		A3E226751F92CAC5003FE7D9 /* RealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E226741F92CAC5003FE7D9 /* RealmObject.swift */; };
+		A3E226771F92CAEA003FE7D9 /* LocalRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E226761F92CAEA003FE7D9 /* LocalRealmObject.swift */; };
+		A3E92F0A1F92CF4A006508B6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F091F92CF4A006508B6 /* Order.swift */; };
+		A3E92F0C1F92CF55006508B6 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F0B1F92CF55006508B6 /* Role.swift */; };
+		A3E92F0E1F92CF5F006508B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F0D1F92CF5F006508B6 /* User.swift */; };
+		A3E92F101F92CF6C006508B6 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F0F1F92CF6C006508B6 /* OrderView.swift */; };
+		A3E92F121F92CF77006508B6 /* RoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F111F92CF77006508B6 /* RoleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,11 +86,17 @@
 		A3D7A2791F81314B00B4BB86 /* DiberClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiberClientUITests.swift; sourceTree = "<group>"; };
 		A3D7A27B1F81314B00B4BB86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3D7A2871F813B0500B4BB86 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		A3DF20A71F8A29F2003D94AD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		A3DF20A91F8A29FA003D94AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A3E226691F92A1DE003FE7D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A3E2266B1F92A7DC003FE7D9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A3E2266D1F92B188003FE7D9 /* AlertControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerHelper.swift; sourceTree = "<group>"; };
+		A3E2266F1F92C630003FE7D9 /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
+		A3E226741F92CAC5003FE7D9 /* RealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObject.swift; sourceTree = "<group>"; };
+		A3E226761F92CAEA003FE7D9 /* LocalRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRealmObject.swift; sourceTree = "<group>"; };
+		A3E92F091F92CF4A006508B6 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		A3E92F0B1F92CF55006508B6 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		A3E92F0D1F92CF5F006508B6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A3E92F0F1F92CF6C006508B6 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		A3E92F111F92CF77006508B6 /* RoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleView.swift; sourceTree = "<group>"; };
 		A56A34FBF1C676B85478E553 /* Pods-DiberClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClientTests/Pods-DiberClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		B0D2BD52AA740F076077303C /* Pods_DiberClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiberClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38CF4385202BC90C3920B62 /* Pods-DiberClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClientUITests/Pods-DiberClientUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				A3E2266B1F92A7DC003FE7D9 /* AuthService.swift */,
+				A3E2266F1F92C630003FE7D9 /* OrderService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -283,8 +296,8 @@
 		A3DF20A61F8A29AD003D94AD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A3DF20A71F8A29F2003D94AD /* Order.swift */,
-				A3DF20A91F8A29FA003D94AD /* User.swift */,
+				A3E226791F92CB57003FE7D9 /* View */,
+				A3E226731F92CABB003FE7D9 /* Realm */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -296,6 +309,35 @@
 				A3E2266D1F92B188003FE7D9 /* AlertControllerHelper.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A3E226731F92CABB003FE7D9 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				A3E226781F92CB4B003FE7D9 /* Base */,
+				A3E92F091F92CF4A006508B6 /* Order.swift */,
+				A3E92F0B1F92CF55006508B6 /* Role.swift */,
+				A3E92F0D1F92CF5F006508B6 /* User.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		A3E226781F92CB4B003FE7D9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A3E226741F92CAC5003FE7D9 /* RealmObject.swift */,
+				A3E226761F92CAEA003FE7D9 /* LocalRealmObject.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A3E226791F92CB57003FE7D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A3E92F0F1F92CF6C006508B6 /* OrderView.swift */,
+				A3E92F111F92CF77006508B6 /* RoleView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,6 +524,8 @@
 				"${BUILT_PRODUCTS_DIR}/AsyncSwift/Async.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -489,6 +533,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Async.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -600,19 +646,25 @@
 			files = (
 				A3D7A25C1F81314B00B4BB86 /* AddressesVC.swift in Sources */,
 				A3D7A2581F81314B00B4BB86 /* AppDelegate.swift in Sources */,
+				A3E92F0C1F92CF55006508B6 /* Role.swift in Sources */,
 				A3E2266E1F92B189003FE7D9 /* AlertControllerHelper.swift in Sources */,
-				A3DF20AA1F8A29FA003D94AD /* User.swift in Sources */,
+				A3E226701F92C630003FE7D9 /* OrderService.swift in Sources */,
+				A3E226771F92CAEA003FE7D9 /* LocalRealmObject.swift in Sources */,
 				A37C13E31F8A480700BFF747 /* NetworkManager.swift in Sources */,
 				A37C13EB1F8A488300BFF747 /* ReachabilityManager.swift in Sources */,
+				A3E92F0E1F92CF5F006508B6 /* User.swift in Sources */,
 				A3E2266A1F92A1DE003FE7D9 /* Constants.swift in Sources */,
 				A36EABDF1F929EBB007DA6D2 /* String+Diber.swift in Sources */,
 				A37C13E91F8A486700BFF747 /* PreferenceManager.swift in Sources */,
-				A3DF20A81F8A29F2003D94AD /* Order.swift in Sources */,
 				A37C13ED1F8A49C200BFF747 /* ApiEndpoint.swift in Sources */,
 				A3D7A2881F813B0500B4BB86 /* ProfileVC.swift in Sources */,
+				A3E92F0A1F92CF4A006508B6 /* Order.swift in Sources */,
 				A36EABD81F927698007DA6D2 /* LoginVC.swift in Sources */,
+				A3E92F121F92CF77006508B6 /* RoleView.swift in Sources */,
 				A3E2266C1F92A7DC003FE7D9 /* AuthService.swift in Sources */,
 				A3D7A25A1F81314B00B4BB86 /* OrdersVC.swift in Sources */,
+				A3E92F101F92CF6C006508B6 /* OrderView.swift in Sources */,
+				A3E226751F92CAC5003FE7D9 /* RealmObject.swift in Sources */,
 				A37C13E61F8A482F00BFF747 /* OAuth2Handler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

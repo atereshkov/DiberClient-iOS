@@ -14,15 +14,13 @@ enum ApiEndpoint: String {
     case apiVersion = "api/v1/"
     
     case auth = "oauth/token"
+    case userOrders = "users/2/orders"
     
-    func url(objectId: String? = nil, queryParams: [String: String]? = nil) -> String {
+    func url(queryParams: [String: String]? = nil) -> String {
         let authUrl = "\(ApiEndpoint.base.rawValue)\(self.rawValue)"
         let commonUrl = "\(ApiEndpoint.base.rawValue)\(ApiEndpoint.apiVersion)\(self.rawValue)"
         var url = self == .auth ? authUrl : commonUrl
         
-        if let objectId = objectId {
-            url += "/\(objectId)"
-        }
         if let queryParams = queryParams {
             url += "?"
             var index = 0

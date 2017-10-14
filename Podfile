@@ -11,6 +11,7 @@ target 'DiberClient' do
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'AsyncSwift'
   pod 'ReachabilitySwift', '~> 3'
+  pod 'RealmSwift', '2.10.2'
 
   target 'DiberClientTests' do
     inherit! :search_paths
