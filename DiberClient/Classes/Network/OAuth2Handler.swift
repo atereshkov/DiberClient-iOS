@@ -27,11 +27,9 @@ class OAuth2Handler: RequestAdapter, RequestRetrier {
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         if (urlRequest.url?.absoluteString.contains(ApiEndpoint.auth.rawValue))! {
-            let secretData = "\(kClientId):\(kClientSecret)".data(using: .utf8)!
-            let base64Secret = secretData.base64EncodedString()
-            urlRequest.setValue("Basic \(base64Secret)", forHTTPHeaderField: "Authorization")
+            urlRequest.setValue(NetworkConstant.authorizationValue, forHTTPHeaderField: NetworkConstant.headerAuthorization)
         } else {
-            urlRequest.setValue("Bearer \(PreferenceManager.sharedInstance.token)", forHTTPHeaderField: "Authorization")
+            urlRequest.setValue("Bearer \(PreferenceManager.shared.token)", forHTTPHeaderField: NetworkConstant.headerAuthorization)
         }
         return urlRequest
     }
@@ -67,13 +65,13 @@ class OAuth2Handler: RequestAdapter, RequestRetrier {
         let url = ApiEndpoint.auth.url()
         
         let params: [String: String] = [
-            "grant_type": "refresh_token",
-            "client_id": kClientId,
-            "refresh_token": PreferenceManager.sharedInstance.refreshToken
+            NetworkConstant.grantType: NetworkConstant.refreshToken,
+            NetworkConstant.clientId: NetworkConstant.clientIdValue,
+            NetworkConstant.refreshToken: PreferenceManager.shared.refreshToken
         ]
         
-        print("refresh token:")
-        print(params)
+        Swift.print("[OAuth2Handler] Refresh token:")
+        Swift.print(params)
         
         sessionManager?.request(url, method: .post, parameters: params)
             .responseJSON { [weak self] response in
@@ -83,8 +81,8 @@ class OAuth2Handler: RequestAdapter, RequestRetrier {
                     let accessToken = json["access_token"] as? String,
                     let refreshToken = json["refresh_token"] as? String
                 {
-                    PreferenceManager.sharedInstance.token = accessToken
-                    PreferenceManager.sharedInstance.refreshToken = refreshToken
+                    PreferenceManager.shared.token = accessToken
+                    PreferenceManager.shared.refreshToken = refreshToken
                     completion(true, accessToken, refreshToken)
                 } else {
                     let notification = Notification(name: .AuthenticationExpired)

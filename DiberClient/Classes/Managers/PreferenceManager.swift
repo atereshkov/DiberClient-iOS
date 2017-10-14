@@ -18,7 +18,7 @@ fileprivate enum PreferenceKeys: String {
 
 class PreferenceManager: NSObject {
     
-    static let sharedInstance = PreferenceManager()
+    static let shared = PreferenceManager()
     
     // MARK: Init
     
