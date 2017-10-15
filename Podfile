@@ -13,6 +13,7 @@ target 'DiberClient' do
   pod 'ReachabilitySwift', '~> 3'
   pod 'RealmSwift', '2.10.2'
   pod 'Localize-Swift', '~> 2.0'
+  pod 'EXPLogger', '~> 1.0.1'
 
   target 'DiberClientTests' do
     inherit! :search_paths

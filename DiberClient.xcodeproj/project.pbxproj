@@ -42,7 +42,6 @@
 		A3E92F0C1F92CF55006508B6 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F0B1F92CF55006508B6 /* Role.swift */; };
 		A3E92F0E1F92CF5F006508B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F0D1F92CF5F006508B6 /* User.swift */; };
 		A3E92F101F92CF6C006508B6 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F0F1F92CF6C006508B6 /* OrderView.swift */; };
-		A3E92F121F92CF77006508B6 /* RoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F111F92CF77006508B6 /* RoleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +105,6 @@
 		A3E92F0B1F92CF55006508B6 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		A3E92F0D1F92CF5F006508B6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A3E92F0F1F92CF6C006508B6 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
-		A3E92F111F92CF77006508B6 /* RoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleView.swift; sourceTree = "<group>"; };
 		A56A34FBF1C676B85478E553 /* Pods-DiberClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClientTests/Pods-DiberClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		B0D2BD52AA740F076077303C /* Pods_DiberClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiberClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38CF4385202BC90C3920B62 /* Pods-DiberClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClientUITests/Pods-DiberClientUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -366,7 +364,6 @@
 			isa = PBXGroup;
 			children = (
 				A3E92F0F1F92CF6C006508B6 /* OrderView.swift */,
-				A3E92F111F92CF77006508B6 /* RoleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -554,6 +551,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DiberClient/Pods-DiberClient-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AsyncSwift/Async.framework",
+				"${BUILT_PRODUCTS_DIR}/EXPLogger/EXPLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
@@ -564,6 +562,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Async.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EXPLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
@@ -697,7 +696,6 @@
 				A3D7A2881F813B0500B4BB86 /* ProfileVC.swift in Sources */,
 				A3E92F0A1F92CF4A006508B6 /* Order.swift in Sources */,
 				A36EABD81F927698007DA6D2 /* LoginVC.swift in Sources */,
-				A3E92F121F92CF77006508B6 /* RoleView.swift in Sources */,
 				A3E2266C1F92A7DC003FE7D9 /* AuthService.swift in Sources */,
 				A3D7A25A1F81314B00B4BB86 /* OrdersVC.swift in Sources */,
 				A32183131F9369D300897BC4 /* UserService.swift in Sources */,

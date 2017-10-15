@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.5.1)
   - AsyncSwift (2.0.1)
+  - EXPLogger (1.0.2)
   - Localize-Swift (2.0.0)
   - MBProgressHUD (1.0.0)
   - ReachabilitySwift (3)
@@ -13,6 +14,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.5.0)
   - AsyncSwift
+  - EXPLogger (~> 1.0.1)
   - Localize-Swift (~> 2.0)
   - MBProgressHUD (~> 1.0.0)
   - ReachabilitySwift (~> 3)
@@ -21,12 +23,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AsyncSwift: 632138e42ead868b53c745fcde9bf733ce1527ad
+  EXPLogger: 08458e9be91b4ad773ad5d0780e7dd6bfce427be
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
   RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
 
-PODFILE CHECKSUM: c1af63238bb5d546676b11996ace32237431396d
+PODFILE CHECKSUM: d5bb50bd7f2c265985e63653eb314584b095b778
 
 COCOAPODS: 1.3.1
