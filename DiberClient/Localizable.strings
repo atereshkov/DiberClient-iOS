@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  DiberClient
+
+  Created by Alexander Tereshkov on 10/15/17.
+  Copyright © 2017 Alexander Tereshkov. All rights reserved.
+*/
+
+// Alerts
+
+"alert.error.title" = "Error";
+"alert.error.unexpected.description" = "Oops, something went wrong.";
+"alert.error.unexpected.recovery" = "Please try again later.";
+"alert.ok" = "Ok";
+"alert.offline.message" = "The operation cannot be performed without an Internet connection";
+"alert.register.user.error.message" = "Failed to login with this combination of email and password";
+"alert.error.unexpected.nodata" = "No Data.";
+"alert.session.expired.error.msg" = "Sorry! Your session has been expired. You will be navigated to login screen.";
+"alert.title.information" = "Information";

@@ -7,125 +7,119 @@
 //
 
 import UIKit
+import Localize_Swift
 
 extension UIAlertController {
     
     // MARK: Util
     
-    static func showErrorAlertController(error: Error?, fromViewController viewController: UIViewController) -> Void {
+    static func showErrorAlertController(error: Error?, fromViewController viewController: UIViewController) {
         UIAlertController.showAlert(
-            title: NSLocalizedString("alert.error.title", comment: ""),
+            title: "alert.error.title".localized(),
             message: error?.localizedDescription,
             fromViewController: viewController)
     }
     
-    static func showErrorAlertControllerWithMessage(message: String, fromViewController viewController: UIViewController) -> Void {
+    static func showErrorAlertControllerWithMessage(message: String, fromViewController viewController: UIViewController) {
         UIAlertController.showAlert(
-            title: NSLocalizedString("alert.error.title", comment: ""),
-            message: message,
-            fromViewController: viewController)
+            title: "alert.error.title".localized(), message: message, fromViewController: viewController)
     }
     
-    static func showAlertController(title: String? = nil, message: String? = nil, fromViewController viewController: UIViewController) -> Void {
-        let errorTitle = title ?? NSLocalizedString("alert.error.title", comment: "")
+    static func showAlertController(title: String? = nil, message: String? = nil, fromViewController viewController: UIViewController) {
+        let errorTitle = title ?? "alert.error.title".localized()
         
-        let errorMessage = message ?? "\(NSLocalizedString("alert.error.unexpected.description", comment: "")) \(NSLocalizedString("alert.error.unexpected.recovery", comment: ""))"
+        let errorMessage = message ?? "\("alert.error.unexpected.description".localized()) \("alert.error.unexpected.recovery".localized())"
         
-        UIAlertController.showAlert(
-            title: errorTitle,
-            message: errorMessage,
-            fromViewController: viewController)
+        UIAlertController.showAlert(title: errorTitle, message: errorMessage, fromViewController: viewController)
     }
     
     // MARK: Offline error
     
-    static func showOfflineErrorAlert(fromViewController controller: UIViewController) -> Void {
+    static func showOfflineErrorAlert(fromViewController controller: UIViewController) {
         UIAlertController.showAlert(
-            title: NSLocalizedString("alert.error.title", comment: ""),
-            message: NSLocalizedString("alert.offline.message", comment: ""),
+            title: "alert.error.title".localized(),
+            message: "alert.offline.message".localized(),
             fromViewController: controller)
     }
     
     // MARK: Login errors
     
-    static func showInvalidLoginDataAlert(fromViewController controller: UIViewController) -> Void {
+    static func showInvalidLoginDataAlert(fromViewController controller: UIViewController) {
         UIAlertController.showAlert(
-            title: NSLocalizedString("alert.error.title", comment: ""),
-            message: NSLocalizedString("alert.register.user.error.message", comment: ""),
+            title: "alert.error.title".localized(),
+            message: "alert.register.user.error.message".localized(),
             fromViewController: controller)
     }
     
     // MARK: Common
     
-    static func showAlert(title: String?, message: String?, fromViewController controller: UIViewController) -> Void {
+    static func showAlert(title: String?, message: String?, fromViewController controller: UIViewController) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("alert.ok", comment: ""), style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "alert.ok".localized(), style: UIAlertActionStyle.default, handler: nil))
         controller.present(alert, animated: true, completion: nil)
     }
 }
 
 extension UIViewController {
     
-    func showOfflineErrorAlert() -> Void {
-        UIAlertController.showOfflineErrorAlert(fromViewController: self);
+    func showOfflineErrorAlert() {
+        UIAlertController.showOfflineErrorAlert(fromViewController: self)
     }
     
-    func showMessageErrorAlert(message: String) -> Void {
-        UIAlertController.showAlertController(title: NSLocalizedString("alert.error.title", comment: ""),
-                                              message: message,
-                                              fromViewController: self);
+    func showMessageErrorAlert(message: String) {
+        UIAlertController.showAlertController(title: "alert.error.title".localized(), message: message,
+                                              fromViewController: self)
     }
     
-    func showUnexpectedErrorAlert(error: Error? = nil) -> Void {
+    func showUnexpectedErrorAlert(error: Error? = nil) {
         if let err = error {
-            UIAlertController.showAlertController(title: NSLocalizedString("alert.error.title", comment: ""),
+            UIAlertController.showAlertController(title: "alert.error.title".localized(),
                                                   message: err.localizedDescription,
-                                                  fromViewController: self);
+                                                  fromViewController: self)
         } else {
             UIAlertController.showAlertController(fromViewController: self)
         }
     }
     
-    func showAlert(title : String?, message: String?) -> Void {
+    func showAlert(title : String?, message: String?) {
         UIAlertController.showAlert(title: title, message: message, fromViewController: self)
     }
     
-    func showMissingErrorAlert() -> Void {
-        UIAlertController.showAlertController(title: NSLocalizedString("alert.error.title", comment: ""),
-                                              message: NSLocalizedString("alert.error.unexpected.nodata", comment: ""),
+    func showMissingErrorAlert() {
+        UIAlertController.showAlertController(title: "alert.error.title".localized(),
+                                              message: "alert.error.unexpected.nodata".localized(),
                                               fromViewController: self)
         
     }
     
-    func showAuthExpiredAlert(callback: (() -> Void)? = nil) -> Void {
-        let alert = UIAlertController(title: NSLocalizedString("alert.error.title", comment: ""),
-                                      message: NSLocalizedString("alert.session.expired.error.msg", comment: ""),
+    func showAuthExpiredAlert(callback: (() -> ())? = nil) {
+        let alert = UIAlertController(title: "alert.error.title".localized(),
+                                      message: "alert.session.expired.error.msg".localized(),
                                       preferredStyle: UIAlertControllerStyle.alert)
         
-        alert.addAction(UIAlertAction(title: NSLocalizedString("alert.ok", comment: ""), style: UIAlertActionStyle.default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "alert.ok".localized(),
+                                      style: UIAlertActionStyle.default,
+                                      handler: { (action) in
             callback?()
         }))
         present(alert, animated: true, completion: nil)
     }
     
-    func showAlertWithCallback(title : String?, message: String?, callback : (() -> Void)? = nil) -> Void {
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: UIAlertControllerStyle.alert)
+    func showAlertWithCallback(title : String?, message: String?, callback: (() -> ())? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
-        alert.addAction(UIAlertAction(title: NSLocalizedString("alert.ok", comment: ""), style: UIAlertActionStyle.default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "alert.ok".localized(), style: UIAlertActionStyle.default, handler: { (action) in
             callback?()
         }))
         present(alert, animated: true, completion: nil)
     }
     
-    func showAlert(with title: String,
-                   and message: String,
-                   buttons : [(title: String, style : UIAlertActionStyle, callback: (()->())?)]) {
+    func showAlert(with title: String, and message: String,
+                   buttons : [(title: String, style : UIAlertActionStyle, callback: (() -> ())?)]) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         for button in buttons {
             let defaultAction = UIAlertAction(title: button.title, style: button.style, handler: { action in
-                button.callback?();
+                button.callback?()
             })
             alertController.addAction(defaultAction)
         }
