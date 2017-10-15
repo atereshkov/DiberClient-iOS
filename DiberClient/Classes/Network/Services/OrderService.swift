@@ -35,9 +35,9 @@ class OrderService: NSObject {
                             }
                         }
                     }
-                    completion?(orders, response.result.error)
+                    callback?(UserOrdersResult.Success(orders: orders))
                 } else {
-                    completion?(orders, response.result.error)
+                    callback?(UserOrdersResult.UnexpectedError(error: response.result.error))
                 }
         }
     }

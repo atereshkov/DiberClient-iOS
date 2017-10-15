@@ -47,7 +47,7 @@ extension UIAlertController {
     static func showInvalidLoginDataAlert(fromViewController controller: UIViewController) {
         UIAlertController.showAlert(
             title: "alert.error.title".localized(),
-            message: "alert.register.user.error.message".localized(),
+            message: "alert.login.user.error.message".localized(),
             fromViewController: controller)
     }
     

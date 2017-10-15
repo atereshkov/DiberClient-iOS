@@ -12,6 +12,8 @@
 		9BA74188C5B8EBE850B00F0A /* Pods_DiberClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D2BD52AA740F076077303C /* Pods_DiberClientTests.framework */; };
 		A321830F1F93583400897BC4 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A321830E1F93583400897BC4 /* OrderCell.swift */; };
 		A32183111F935AA100897BC4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A32183101F935AA100897BC4 /* Localizable.strings */; };
+		A32183131F9369D300897BC4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32183121F9369D300897BC4 /* UserService.swift */; };
+		A32183151F936F2400897BC4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32183141F936F2400897BC4 /* Address.swift */; };
 		A36EABD61F927661007DA6D2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36EABD51F927661007DA6D2 /* Login.storyboard */; };
 		A36EABD81F927698007DA6D2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EABD71F927698007DA6D2 /* LoginVC.swift */; };
 		A36EABDF1F929EBB007DA6D2 /* String+Diber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EABDE1F929EBB007DA6D2 /* String+Diber.swift */; };
@@ -67,6 +69,8 @@
 		703BE3A45AFF8FC71BFB107A /* Pods-DiberClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClient/Pods-DiberClient.debug.xcconfig"; sourceTree = "<group>"; };
 		A321830E1F93583400897BC4 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		A32183101F935AA100897BC4 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		A32183121F9369D300897BC4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		A32183141F936F2400897BC4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		A36EABD51F927661007DA6D2 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A36EABD71F927698007DA6D2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		A36EABDE1F929EBB007DA6D2 /* String+Diber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Diber.swift"; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 			children = (
 				A3E2266B1F92A7DC003FE7D9 /* AuthService.swift */,
 				A3E2266F1F92C630003FE7D9 /* OrderService.swift */,
+				A32183121F9369D300897BC4 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				A3E92F091F92CF4A006508B6 /* Order.swift */,
 				A3E92F0B1F92CF55006508B6 /* Role.swift */,
 				A3E92F0D1F92CF5F006508B6 /* User.swift */,
+				A32183141F936F2400897BC4 /* Address.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -662,6 +668,7 @@
 				A37C13E31F8A480700BFF747 /* NetworkManager.swift in Sources */,
 				A37C13EB1F8A488300BFF747 /* ReachabilityManager.swift in Sources */,
 				A3E92F0E1F92CF5F006508B6 /* User.swift in Sources */,
+				A32183151F936F2400897BC4 /* Address.swift in Sources */,
 				A3E2266A1F92A1DE003FE7D9 /* Constants.swift in Sources */,
 				A321830F1F93583400897BC4 /* OrderCell.swift in Sources */,
 				A36EABDF1F929EBB007DA6D2 /* String+Diber.swift in Sources */,
@@ -673,6 +680,7 @@
 				A3E92F121F92CF77006508B6 /* RoleView.swift in Sources */,
 				A3E2266C1F92A7DC003FE7D9 /* AuthService.swift in Sources */,
 				A3D7A25A1F81314B00B4BB86 /* OrdersVC.swift in Sources */,
+				A32183131F9369D300897BC4 /* UserService.swift in Sources */,
 				A3E92F101F92CF6C006508B6 /* OrderView.swift in Sources */,
 				A3E226751F92CAC5003FE7D9 /* RealmObject.swift in Sources */,
 				A37C13E61F8A482F00BFF747 /* OAuth2Handler.swift in Sources */,

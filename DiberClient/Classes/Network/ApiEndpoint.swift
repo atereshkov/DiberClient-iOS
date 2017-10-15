@@ -14,6 +14,7 @@ enum ApiEndpoint: String {
     case apiVersion = "api/v1/"
     
     case auth = "oauth/token"
+    case userInfo = "users/info"
     case userOrders = "users/2/orders"
     
     func url(queryParams: [String: String]? = nil) -> String {

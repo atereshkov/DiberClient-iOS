@@ -23,7 +23,7 @@ class LoginVC: UIViewController {
     override func viewDidAppear(_ animated:Bool) {
         super.viewDidAppear(false)
         
-        skipLoginIfAuthorized()
+        //skipLoginIfAuthorized()
     }
     
     // MARK: Actions
