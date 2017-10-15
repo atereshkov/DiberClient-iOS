@@ -23,9 +23,9 @@ class PreferenceManager: NSObject {
     // MARK: Init
     
     func initialize() {
-        Swift.print("[PreferenceManager] initialize()")
+        LogManager.shared.log.info("Initialize")
         if isFirstRunApp() {
-            Swift.print("[PreferenceManager] first run")
+            LogManager.shared.log.info("First run")
             clear()
         }
     }

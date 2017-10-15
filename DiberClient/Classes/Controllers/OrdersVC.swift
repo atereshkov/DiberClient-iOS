@@ -17,11 +17,12 @@ class OrdersVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        LogManager.shared.log.info("Hello!")
         loadData(silent: false)
     }
     
     deinit {
-        Swift.print("[OrdersVC] Deinit")
+        LogManager.shared.log.info("Deinitialization")
     }
     
     private func loadData(silent: Bool) {

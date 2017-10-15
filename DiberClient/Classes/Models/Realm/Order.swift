@@ -47,7 +47,7 @@ extension Order {
     
     class func with(data: [String: Any]) -> Order? {
         guard let id = data["id"] as? Int, let date = data["date"] as? Date, let price = data["price"] as? Double, let status = data["status"] as? String else {
-            Swift.print("[Order] Failed to parse order")
+            LogManager.shared.log.error("Failed to parse Order")
             return nil
         }
         let descr = data["description"] as? String ?? ""

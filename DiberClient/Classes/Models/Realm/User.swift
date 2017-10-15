@@ -44,7 +44,7 @@ extension User {
     
     class func with(data: [String: Any]) -> User? {
         guard let id = data["id"] as? Int, let username = data["username"] as? String, let password = data["password"] as? String else {
-            Swift.print("[User] Failed to parse user")
+            LogManager.shared.log.error("Failed to parse User")
             return nil
         }
         let email = data["email"] as? String ?? ""
@@ -55,7 +55,7 @@ extension User {
         if let rolesData = data["roles"] as? [[String: Any]] {
             for dataRole in rolesData {
                 guard let userRole = Role.with(data: dataRole) else {
-                    Swift.print("[User] Failed to parse user role")
+                    LogManager.shared.log.error("Failed to parse User Role")
                     return nil
                 }
                 roles.append(userRole)

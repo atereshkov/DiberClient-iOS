@@ -45,7 +45,7 @@ extension Address {
     
     class func with(data: [String: Any]) -> Address? {
         guard let id = data["id"] as? Int, let name = data["name"] as? String, let address = data["address"] as? String, let country = data["country"] as? String, let phone = data["phone"] as? String, let city = data["city"] as? String else {
-            Swift.print("[Address] Failed to parse address")
+            LogManager.shared.log.error("Failed to parse Address")
             return nil
         }
         let region = data["region"] as? String ?? ""

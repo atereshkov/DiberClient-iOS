@@ -26,6 +26,10 @@ class LoginVC: UIViewController {
         skipLoginIfAuthorized()
     }
     
+    deinit {
+        LogManager.shared.log.info("Deinitialization")
+    }
+    
     // MARK: Actions
     
     @IBAction func signInAction(_ sender: Any) {
