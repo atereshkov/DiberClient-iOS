@@ -45,39 +45,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GsX-GG-UTQ">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-Vr-eG0" userLabel="TableView Container">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="z3a-9t-td1" customClass="OrderCell" customModule="DiberClient" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z3a-9t-td1" id="yPf-yG-4Tg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb8-MO-k7t">
-                                                    <rect key="frame" x="16" y="11" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Jb8-MO-k7t" firstAttribute="leading" secondItem="yPf-yG-4Tg" secondAttribute="leading" constant="16" id="Wj6-mJ-iuZ"/>
-                                                <constraint firstItem="Jb8-MO-k7t" firstAttribute="centerY" secondItem="yPf-yG-4Tg" secondAttribute="centerY" id="jrS-VS-aV5"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                <connections>
+                                    <segue destination="aU9-E4-IGG" kind="embed" id="Mel-wH-giG"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="GsX-GG-UTQ" secondAttribute="bottom" id="0d1-fI-vzM"/>
-                            <constraint firstItem="GsX-GG-UTQ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="Mwq-xY-lgk"/>
-                            <constraint firstItem="GsX-GG-UTQ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="bkD-b1-R8n"/>
-                            <constraint firstAttribute="trailing" secondItem="GsX-GG-UTQ" secondAttribute="trailing" id="r5f-Jx-VwQ"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Ebo-Vr-eG0" secondAttribute="bottom" id="I4g-Ya-fs1"/>
+                            <constraint firstItem="Ebo-Vr-eG0" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="KWH-uQ-Qix"/>
+                            <constraint firstItem="Ebo-Vr-eG0" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="gyb-FT-2U3"/>
+                            <constraint firstAttribute="trailing" secondItem="Ebo-Vr-eG0" secondAttribute="trailing" id="vsk-lA-WHs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Orders" image="first" id="acW-dT-cKf"/>
@@ -88,6 +68,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1696.8" y="-760.56971514242889"/>
+        </scene>
+        <!--Orders TableVC-->
+        <scene sceneID="B96-oc-ANP">
+            <objects>
+                <tableViewController id="aU9-E4-IGG" customClass="OrdersTableVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pC7-b7-Q8X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" id="N57-4L-2kH" customClass="OrderCell" customModule="DiberClient" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N57-4L-2kH" id="S3j-7D-tZo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwk-bW-g9y">
+                                            <rect key="frame" x="23" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aU9-E4-IGG" id="Cma-2T-kwG"/>
+                            <outlet property="delegate" destination="aU9-E4-IGG" id="SKb-1L-zVk"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HfY-qi-tM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2489" y="-1436"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Our-rO-4eA">

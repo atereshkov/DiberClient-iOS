@@ -7,19 +7,48 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class OrdersVC: UIViewController {
+    
+    fileprivate var loadingData = false // Used to prevent multiple simultanious load requests
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        loadData(silent: false)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    deinit {
+        Swift.print("[OrdersVC] Deinit")
     }
-
+    
+    private func loadData(silent: Bool) {
+        guard !loadingData else { return }
+        loadingData = true
+        if !silent {
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+        }
+        
+        OrderService.shared.getOrders() { [weak self] (result) in
+            guard let self_ = self else { return }
+            defer {
+                MBProgressHUD.hide(for: self_.view, animated: true)
+            }
+            
+            switch result {
+            case .Success(let orders):
+                break
+                //self_.orders = orders
+            case .UnexpectedError(let error):
+                self_.showUnexpectedErrorAlert(error: error)
+                break
+            case .OfflineError:
+                self_.showOfflineErrorAlert()
+                break
+            }
+        }
+    }
 
 }
-

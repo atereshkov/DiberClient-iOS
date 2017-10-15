@@ -19,7 +19,7 @@ enum ApiEndpoint: String {
     
     func url(queryParams: [String: String]? = nil) -> String {
         let authUrl = "\(ApiEndpoint.base.rawValue)\(self.rawValue)"
-        let commonUrl = "\(ApiEndpoint.base.rawValue)\(ApiEndpoint.apiVersion)\(self.rawValue)"
+        let commonUrl = "\(ApiEndpoint.base.rawValue)\(ApiEndpoint.apiVersion.rawValue)\(self.rawValue)"
         var url = self == .auth ? authUrl : commonUrl
         
         if let queryParams = queryParams {

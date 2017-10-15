@@ -30,7 +30,9 @@ class OrderCell: UITableViewCell {
     
     //MARK:- Public
     
-    
+    public func bind(with item: Order) {
+        
+    }
     
     //MARK:- Actions
     

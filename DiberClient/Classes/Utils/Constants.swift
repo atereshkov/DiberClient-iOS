@@ -9,8 +9,12 @@
 import Foundation
 import UIKit
 
-enum Segues : String {
+enum Segues: String {
     case mainScreen = "MainScreen"
+}
+
+enum Cells: String {
+    case orders = "OrdersCell"
 }
 
 class NetworkConstant {

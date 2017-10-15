@@ -11,7 +11,7 @@ import Async
 
 class OrderService: NSObject {
     
-    static let shared = AuthService()
+    static let shared = OrderService()
     let sessionManager = NetworkManager.shared.sessionManager
     
     enum UserOrdersResult {
@@ -20,7 +20,7 @@ class OrderService: NSObject {
         case UnexpectedError(error: Error?)
     }
     
-    func getToken(login: String, password: String, callback:((_ result: UserOrdersResult) -> ())? = nil) {
+    func getOrders(callback:((_ result: UserOrdersResult) -> ())? = nil) {
         let url = ApiEndpoint.userOrders.url()
         
         sessionManager.request(url)

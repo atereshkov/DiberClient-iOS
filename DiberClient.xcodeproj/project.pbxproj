@@ -22,6 +22,7 @@
 		A37C13E91F8A486700BFF747 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C13E81F8A486700BFF747 /* PreferenceManager.swift */; };
 		A37C13EB1F8A488300BFF747 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C13EA1F8A488300BFF747 /* ReachabilityManager.swift */; };
 		A37C13ED1F8A49C200BFF747 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C13EC1F8A49C200BFF747 /* ApiEndpoint.swift */; };
+		A38EA3141F93837A0088A112 /* OrdersTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38EA3131F93837A0088A112 /* OrdersTableVC.swift */; };
 		A3D7A2581F81314B00B4BB86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A2571F81314B00B4BB86 /* AppDelegate.swift */; };
 		A3D7A25A1F81314B00B4BB86 /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A2591F81314B00B4BB86 /* OrdersVC.swift */; };
 		A3D7A25C1F81314B00B4BB86 /* AddressesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A25B1F81314B00B4BB86 /* AddressesVC.swift */; };
@@ -79,6 +80,7 @@
 		A37C13E81F8A486700BFF747 /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
 		A37C13EA1F8A488300BFF747 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		A37C13EC1F8A49C200BFF747 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		A38EA3131F93837A0088A112 /* OrdersTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableVC.swift; sourceTree = "<group>"; };
 		A3D7A2541F81314B00B4BB86 /* DiberClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiberClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D7A2571F81314B00B4BB86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3D7A2591F81314B00B4BB86 /* OrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
@@ -175,7 +177,7 @@
 		A36EABDA1F929E65007DA6D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A321830E1F93583400897BC4 /* OrderCell.swift */,
+				A38EA3151F9384F40088A112 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +218,22 @@
 				A37C13EA1F8A488300BFF747 /* ReachabilityManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		A38EA3121F9383620088A112 /* CollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+				A38EA3131F93837A0088A112 /* OrdersTableVC.swift */,
+			);
+			path = CollectionVC;
+			sourceTree = "<group>";
+		};
+		A38EA3151F9384F40088A112 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A321830E1F93583400897BC4 /* OrderCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A3D7A24B1F81314B00B4BB86 = {
@@ -287,6 +305,7 @@
 		A3DF20A41F8A259D003D94AD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A38EA3121F9383620088A112 /* CollectionVC */,
 				A3D7A2591F81314B00B4BB86 /* OrdersVC.swift */,
 				A3D7A25B1F81314B00B4BB86 /* AddressesVC.swift */,
 				A3D7A2871F813B0500B4BB86 /* ProfileVC.swift */,
@@ -659,6 +678,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38EA3141F93837A0088A112 /* OrdersTableVC.swift in Sources */,
 				A3D7A25C1F81314B00B4BB86 /* AddressesVC.swift in Sources */,
 				A3D7A2581F81314B00B4BB86 /* AppDelegate.swift in Sources */,
 				A3E92F0C1F92CF55006508B6 /* Role.swift in Sources */,
