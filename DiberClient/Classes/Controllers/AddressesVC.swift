@@ -16,4 +16,3 @@ class AddressesVC: UIViewController {
     }
 
 }
-

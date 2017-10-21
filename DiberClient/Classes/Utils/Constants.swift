@@ -11,6 +11,8 @@ import UIKit
 
 enum Segues: String {
     case mainScreen = "MainScreen"
+    case ordersTable = "OrdersTableVC"
+    case loginFromMain = "LoginFromMain"
 }
 
 enum Cells: String {

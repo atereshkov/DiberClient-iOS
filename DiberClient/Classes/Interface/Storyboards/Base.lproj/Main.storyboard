@@ -48,7 +48,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-Vr-eG0" userLabel="TableView Container">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <connections>
-                                    <segue destination="aU9-E4-IGG" kind="embed" id="Mel-wH-giG"/>
+                                    <segue destination="aU9-E4-IGG" kind="embed" identifier="OrdersTableVC" id="Mel-wH-giG"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -208,16 +208,17 @@
             </objects>
             <point key="canvasLocation" x="1697" y="-27"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main NavigationVC-->
         <scene sceneID="wm3-fd-Kf1">
             <objects>
-                <navigationController navigationBarHidden="YES" id="kRv-hy-taY" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="kRv-hy-taY" customClass="MainNavigationVC" customModule="DiberClient" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KE3-yz-rAj">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
                         <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="UTd-eV-hym"/>
+                        <segue destination="48k-Fr-puE" kind="show" identifier="LoginFromMain" id="7du-LV-RNg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euu-jS-ace" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -245,6 +246,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-84" y="-27"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="hJn-0t-wpC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="48k-Fr-puE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ND4-vN-wZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-980" y="499"/>
         </scene>
     </scenes>
     <resources>

@@ -10,6 +10,7 @@
 		39B140297ED23C5EABA6EF19 /* Pods_DiberClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9A300066A84B6730F825E0 /* Pods_DiberClient.framework */; };
 		487FCC58CF9932558061F9FD /* Pods_DiberClientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4B02FECCF3761634B7AA20 /* Pods_DiberClientUITests.framework */; };
 		9BA74188C5B8EBE850B00F0A /* Pods_DiberClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D2BD52AA740F076077303C /* Pods_DiberClientTests.framework */; };
+		A31A461A1F9B61BC00271116 /* MainNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31A46191F9B61BC00271116 /* MainNavigationVC.swift */; };
 		A321830F1F93583400897BC4 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A321830E1F93583400897BC4 /* OrderCell.swift */; };
 		A32183111F935AA100897BC4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A32183101F935AA100897BC4 /* Localizable.strings */; };
 		A32183131F9369D300897BC4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32183121F9369D300897BC4 /* UserService.swift */; };
@@ -68,6 +69,7 @@
 		5809E4997365EE6F0F3D7C50 /* Pods-DiberClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClient/Pods-DiberClient.release.xcconfig"; sourceTree = "<group>"; };
 		6D9A300066A84B6730F825E0 /* Pods_DiberClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiberClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		703BE3A45AFF8FC71BFB107A /* Pods-DiberClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiberClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiberClient/Pods-DiberClient.debug.xcconfig"; sourceTree = "<group>"; };
+		A31A46191F9B61BC00271116 /* MainNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationVC.swift; sourceTree = "<group>"; };
 		A321830E1F93583400897BC4 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		A32183101F935AA100897BC4 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		A32183121F9369D300897BC4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				A3D7A25B1F81314B00B4BB86 /* AddressesVC.swift */,
 				A3D7A2871F813B0500B4BB86 /* ProfileVC.swift */,
 				A36EABD71F927698007DA6D2 /* LoginVC.swift */,
+				A31A46191F9B61BC00271116 /* MainNavigationVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 				A3E92F0A1F92CF4A006508B6 /* Order.swift in Sources */,
 				A36EABD81F927698007DA6D2 /* LoginVC.swift in Sources */,
 				A3E2266C1F92A7DC003FE7D9 /* AuthService.swift in Sources */,
+				A31A461A1F9B61BC00271116 /* MainNavigationVC.swift in Sources */,
 				A3D7A25A1F81314B00B4BB86 /* OrdersVC.swift in Sources */,
 				A32183131F9369D300897BC4 /* UserService.swift in Sources */,
 				A3E92F101F92CF6C006508B6 /* OrderView.swift in Sources */,

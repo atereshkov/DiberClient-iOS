@@ -11,19 +11,34 @@ import MBProgressHUD
 
 class OrdersVC: UIViewController {
     
+    private var ordersTableVC: OrdersTableVC? = nil
     fileprivate var loadingData = false // Used to prevent multiple simultanious load requests
 
+    // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        LogManager.shared.log.info("Hello!")
+        LogManager.shared.log.info("Initialization")
         loadData(silent: false)
     }
     
     deinit {
         LogManager.shared.log.info("Deinitialization")
     }
+    
+    // MARK: Prepare segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.ordersTable.rawValue {
+            if let ordersTableVC = segue.destination as? OrdersTableVC {
+                self.ordersTableVC = ordersTableVC
+            }
+        }
+    }
+    
+    // MARK: Networking
     
     private func loadData(silent: Bool) {
         guard !loadingData else { return }
@@ -40,8 +55,8 @@ class OrdersVC: UIViewController {
             
             switch result {
             case .Success(let orders):
-                break
-                //self_.orders = orders
+                guard let ordersTableVC = self_.ordersTableVC else { return }
+                ordersTableVC.orders = orders
             case .UnexpectedError(let error):
                 self_.showUnexpectedErrorAlert(error: error)
                 break
