@@ -14,7 +14,7 @@ protocol OrderCellDelegate : class {
 
 class OrderCell: UITableViewCell {
     
-    
+    @IBOutlet weak var label: UILabel!
     
     weak var delegate: OrderCellDelegate?
     
@@ -31,7 +31,7 @@ class OrderCell: UITableViewCell {
     //MARK:- Public
     
     public func bind(with item: Order) {
-        
+        label.text = "\(item.id) | \(item.date)"
     }
     
     //MARK:- Actions

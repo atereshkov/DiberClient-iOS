@@ -46,11 +46,12 @@ class Order: RealmObject {
 extension Order {
     
     class func with(data: [String: Any]) -> Order? {
-        guard let id = data["id"] as? Int, let date = data["date"] as? Date, let price = data["price"] as? Double, let status = data["status"] as? String else {
+        guard let id = data["id"] as? Int, let timestamp = data["date"] as? TimeInterval, let price = data["price"] as? Double, let status = data["status"] as? String else {
             LogManager.shared.log.error("Failed to parse Order")
             return nil
         }
         let descr = data["description"] as? String ?? ""
+        let date = Date(timeIntervalSince1970: timestamp)
         
         var addressTo: Address?
         if let addressToData = data["addressTo"] as? [String: Any] {

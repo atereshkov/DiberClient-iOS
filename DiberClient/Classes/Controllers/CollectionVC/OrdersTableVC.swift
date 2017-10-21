@@ -10,7 +10,11 @@ import UIKit
 
 class OrdersTableVC: UITableViewController {
     
-    var orders = [Order]()
+    var orders = [Order]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

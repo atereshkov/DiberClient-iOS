@@ -16,7 +16,7 @@ enum Segues: String {
 }
 
 enum Cells: String {
-    case orders = "OrdersCell"
+    case orders = "OrderCell"
 }
 
 class NetworkConstant {
