@@ -20,12 +20,12 @@ class OrdersVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        LogManager.shared.log.info("Initialization")
+        LogManager.log.info("Initialization")
         loadData(silent: false)
     }
     
     deinit {
-        LogManager.shared.log.info("Deinitialization")
+        LogManager.log.info("Deinitialization")
     }
     
     // MARK: Prepare segues

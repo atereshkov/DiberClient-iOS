@@ -17,7 +17,7 @@ class MainNavigationVC: UINavigationController {
     }
     
     deinit {
-        LogManager.shared.log.info("Deinitialization")
+        LogManager.log.info("Deinitialization")
         NotificationCenter.default.removeObserver(self, name: .AuthenticationExpired, object: nil)
     }
     

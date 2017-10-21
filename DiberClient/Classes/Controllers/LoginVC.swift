@@ -27,7 +27,7 @@ class LoginVC: UIViewController {
     }
     
     deinit {
-        LogManager.shared.log.info("Deinitialization")
+        LogManager.log.info("Deinitialization")
     }
     
     // MARK: Actions

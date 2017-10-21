@@ -26,7 +26,7 @@ extension Role {
     
     class func with(data: [String: Any]) -> Role? {
         guard let name = data["name"] as? String else {
-            LogManager.shared.log.error("Failed to parse Role")
+            LogManager.log.error("Failed to parse Role")
             return nil
         }
         return Role(name: name)

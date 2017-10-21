@@ -69,7 +69,7 @@ class OAuth2Handler: RequestAdapter, RequestRetrier {
             NetworkConstant.refreshToken: PreferenceManager.shared.refreshToken
         ]
         
-        LogManager.shared.log.info("Refresh token")
+        LogManager.log.info("Refresh token")
         Swift.print(params)
         
         sessionManager?.request(url, method: .post, parameters: params)

@@ -21,7 +21,7 @@ class OrdersTableVC: UITableViewController {
     }
     
     deinit {
-        LogManager.shared.log.info("Deinitialization")
+        LogManager.log.info("Deinitialization")
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

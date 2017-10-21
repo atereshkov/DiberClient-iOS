@@ -36,7 +36,7 @@ class DataManager: NSObject {
                 block(realm)
             }
         } catch let error {
-            LogManager.shared.log.error("Failed to execute write transaction: \(error)")
+            LogManager.log.error("Failed to execute write transaction: \(error)")
         }
     }
     

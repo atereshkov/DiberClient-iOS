@@ -12,15 +12,16 @@ import EXPLogger
 class LogManager: NSObject {
     
     static let shared = LogManager()
+    static let log = LogManager().logger
     
-    let log = EXPLogger.self
+    let logger = EXPLogger.self
     
     // MARK: Init
     
     func initialize() {
         let console = ConsoleTarget()
         console.minLogLevel = .verbose
-        log.addTarget(console)
+        logger.addTarget(console)
     }
     
 }
