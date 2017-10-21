@@ -55,8 +55,7 @@ class OrdersVC: UIViewController {
             
             switch result {
             case .Success(let orders):
-                guard let ordersTableVC = self_.ordersTableVC else { return }
-                ordersTableVC.orders = orders
+                self_.setup(orders)
             case .UnexpectedError(let error):
                 self_.showUnexpectedErrorAlert(error: error)
                 break
@@ -64,6 +63,15 @@ class OrdersVC: UIViewController {
                 self_.showOfflineErrorAlert()
                 break
             }
+        }
+    }
+    
+    // MARK: Helpers
+    
+    // TODO Use OrderView instead of Order Realm Model
+    private func setup(_ orders: [Order]) {
+        if let ordersTableVC = self.ordersTableVC {
+            ordersTableVC.orders = orders
         }
     }
 

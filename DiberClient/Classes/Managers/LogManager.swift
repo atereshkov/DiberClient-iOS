@@ -19,6 +19,7 @@ class LogManager: NSObject {
     
     func initialize() {
         let console = ConsoleTarget()
+        console.minLogLevel = .verbose
         log.addTarget(console)
     }
     

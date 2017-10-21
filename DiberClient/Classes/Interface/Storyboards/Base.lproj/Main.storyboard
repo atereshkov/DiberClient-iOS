@@ -48,7 +48,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-Vr-eG0" userLabel="TableView Container">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <connections>
-                                    <segue destination="aU9-E4-IGG" kind="embed" identifier="OrdersTableVC" id="Mel-wH-giG"/>
+                                    <segue destination="aU9-E4-IGG" kind="embed" identifier="OrdersTableVC" id="Zwh-Va-0i0"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -72,7 +72,7 @@
         <!--Orders TableVC-->
         <scene sceneID="B96-oc-ANP">
             <objects>
-                <tableViewController id="aU9-E4-IGG" customClass="OrdersTableVC" sceneMemberID="viewController">
+                <tableViewController id="aU9-E4-IGG" customClass="OrdersTableVC" customModule="DiberClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pC7-b7-Q8X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
