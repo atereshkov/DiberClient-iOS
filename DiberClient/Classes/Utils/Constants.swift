@@ -12,11 +12,13 @@ import UIKit
 enum Segues: String {
     case mainScreen = "MainScreen"
     case ordersTable = "OrdersTableVC"
+    case addressesTable = "AddressesTableVC"
     case loginFromMain = "LoginFromMain"
 }
 
 enum Cells: String {
     case orders = "OrderCell"
+    case addresses = "AddressCell"
 }
 
 class NetworkConstant {

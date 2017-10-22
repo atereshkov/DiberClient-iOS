@@ -1,20 +1,20 @@
 //
-//  OrdersTableVC.swift
+//  AddressesTableVC.swift
 //  DiberClient
 //
-//  Created by Alexander Tereshkov on 10/15/17.
+//  Created by Alexander Tereshkov on 10/22/17.
 //  Copyright © 2017 Alexander Tereshkov. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
 
-class OrdersTableVC: UITableViewController {
+class AddressesTableVC: UITableViewController {
     
-    fileprivate var ordersDBO: Results<Order> = DataManager.shared.getOrders()
-    fileprivate var orders = [OrderView]()
+    fileprivate var addressesDBO: Results<Address> = DataManager.shared.getAddresses()
+    fileprivate var addresses = [AddressView]()
     
-    fileprivate var ordersChangedNotification: NotificationToken? = nil
+    fileprivate var addressesChangedNotification: NotificationToken? = nil
     fileprivate var debounceTimer: WeakTimer?
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class OrdersTableVC: UITableViewController {
     
     deinit {
         debounceTimer?.invalidate()
-        ordersChangedNotification?.stop()
+        addressesChangedNotification?.stop()
         LogManager.log.info("Deinitialization")
     }
     
@@ -33,40 +33,40 @@ class OrdersTableVC: UITableViewController {
     
     fileprivate func registerNotifications() {
         guard !DataManager.shared.isInWriteTransaction else { return }
-        ordersChangedNotification?.stop()
-        ordersChangedNotification = ordersDBO.addNotificationBlock { [weak self] (changes) in
+        addressesChangedNotification?.stop()
+        addressesChangedNotification = addressesDBO.addNotificationBlock { [weak self] (changes) in
             guard let _self = self else { return }
             switch changes {
             case .initial:
-                _self.reloadOrdersDebounced()
+                _self.reloadAddressesDebounced()
             case .update(_, _, _, _):
-                _self.reloadOrdersDebounced()
+                _self.reloadAddressesDebounced()
             case .error(let error):
                 LogManager.log.error("Failed to update fetch results: \(error)")
             }
         }
     }
     
-    fileprivate func reloadOrdersDebounced() {
+    fileprivate func reloadAddressesDebounced() {
         debounceTimer?.invalidate()
-        debounceTimer = WeakTimer(timeInterval: 0.05, target: self, selector: #selector(reloadOrders), repeats: false)
+        debounceTimer = WeakTimer(timeInterval: 0.05, target: self, selector: #selector(reloadAddresses), repeats: false)
     }
     
-    @objc fileprivate func reloadOrders() {
-        self.orders = OrderView.from(orders: ordersDBO)
+    @objc fileprivate func reloadAddresses() {
+        self.addresses = AddressView.from(addresses: addressesDBO)
         self.tableView.reloadData()
     }
     
     // MARK: TableView
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cells.orders.rawValue, for: indexPath)
-            as? OrderCell else {
-                fatalError("The dequeued cell is not an instance of OrderCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cells.addresses.rawValue, for: indexPath)
+            as? AddressCell else {
+                fatalError("The dequeued cell is not an instance of AddressCell")
         }
         
-        let order = orders[indexPath.row]
-        cell.bind(with: order)
+        let address = addresses[indexPath.row]
+        cell.bind(with: address)
         return cell
     }
     
@@ -75,7 +75,7 @@ class OrdersTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orders.count
+        return addresses.count
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -87,3 +87,4 @@ class OrdersTableVC: UITableViewController {
     }
     
 }
+

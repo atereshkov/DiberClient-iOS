@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class AddressView {
     
@@ -44,6 +45,18 @@ extension AddressView {
         let phone = address.phone
         
         return AddressView(id: id, name: name, postalCode: postalCode, country: country, city: city, address: addressStr, phone: phone)
+    }
+    
+    class func from(addresses: Results<Address>) -> [AddressView] {
+        var addressesDVO = [AddressView]()
+        
+        for addressDBO in addresses {
+            if let address = AddressView.create(from: addressDBO) {
+                addressesDVO.append(address)
+            }
+        }
+        
+        return addressesDVO
     }
     
 }

@@ -16,6 +16,7 @@ enum ApiEndpoint: String {
     case auth = "oauth/token"
     case userInfo = "users/info"
     case userOrders = "users/2/orders"
+    case userAddresses = "users/2/addresses"
     
     func url(queryParams: [String: String]? = nil) -> String {
         let authUrl = "\(ApiEndpoint.base.rawValue)\(self.rawValue)"

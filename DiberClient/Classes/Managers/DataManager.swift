@@ -83,3 +83,22 @@ extension DataManager {
     }
     
 }
+
+// MARK: Addresses
+extension DataManager {
+    
+    func getAddresses() -> Results<Address> {
+        return realm.objects(Address.self)
+    }
+    
+    func gerAddress(identity: Int) -> Address? {
+        return realm.objects(Address.self).filter("identity == \(identity)").first
+    }
+    
+    func save(addresses: [Address]) {
+        for address in addresses {
+            DataManager.shared.save(object: address)
+        }
+    }
+    
+}

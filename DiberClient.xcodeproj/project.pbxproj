@@ -44,6 +44,9 @@
 		A3E226751F92CAC5003FE7D9 /* RealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E226741F92CAC5003FE7D9 /* RealmObject.swift */; };
 		A3E226771F92CAEA003FE7D9 /* LocalRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E226761F92CAEA003FE7D9 /* LocalRealmObject.swift */; };
 		A3E459791F9C0A46003058AE /* WeakTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E459781F9C0A46003058AE /* WeakTimer.swift */; };
+		A3E4597B1F9CD697003058AE /* AddressesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4597A1F9CD697003058AE /* AddressesTableVC.swift */; };
+		A3E4597D1F9CD825003058AE /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4597C1F9CD825003058AE /* AddressCell.swift */; };
+		A3E4597F1F9CDA8C003058AE /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4597E1F9CDA8C003058AE /* AddressService.swift */; };
 		A3E92F0A1F92CF4A006508B6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F091F92CF4A006508B6 /* Order.swift */; };
 		A3E92F0C1F92CF55006508B6 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F0B1F92CF55006508B6 /* Role.swift */; };
 		A3E92F0E1F92CF5F006508B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E92F0D1F92CF5F006508B6 /* User.swift */; };
@@ -113,6 +116,9 @@
 		A3E226741F92CAC5003FE7D9 /* RealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObject.swift; sourceTree = "<group>"; };
 		A3E226761F92CAEA003FE7D9 /* LocalRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRealmObject.swift; sourceTree = "<group>"; };
 		A3E459781F9C0A46003058AE /* WeakTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakTimer.swift; sourceTree = "<group>"; };
+		A3E4597A1F9CD697003058AE /* AddressesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesTableVC.swift; sourceTree = "<group>"; };
+		A3E4597C1F9CD825003058AE /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		A3E4597E1F9CDA8C003058AE /* AddressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
 		A3E92F091F92CF4A006508B6 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A3E92F0B1F92CF55006508B6 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		A3E92F0D1F92CF5F006508B6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -218,6 +224,7 @@
 				A3E2266B1F92A7DC003FE7D9 /* AuthService.swift */,
 				A3E2266F1F92C630003FE7D9 /* OrderService.swift */,
 				A32183121F9369D300897BC4 /* UserService.swift */,
+				A3E4597E1F9CDA8C003058AE /* AddressService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				A38EA3131F93837A0088A112 /* OrdersTableVC.swift */,
+				A3E4597A1F9CD697003058AE /* AddressesTableVC.swift */,
 			);
 			path = CollectionVC;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				A321830E1F93583400897BC4 /* OrderCell.swift */,
+				A3E4597C1F9CD825003058AE /* AddressCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -711,11 +720,14 @@
 				A3E2266A1F92A1DE003FE7D9 /* Constants.swift in Sources */,
 				A321830F1F93583400897BC4 /* OrderCell.swift in Sources */,
 				A36EABDF1F929EBB007DA6D2 /* String.swift in Sources */,
+				A3E4597B1F9CD697003058AE /* AddressesTableVC.swift in Sources */,
 				A37C13E91F8A486700BFF747 /* PreferenceManager.swift in Sources */,
 				A37C13ED1F8A49C200BFF747 /* ApiEndpoint.swift in Sources */,
 				A31A461C1F9BAE2300271116 /* DataManager.swift in Sources */,
 				A3D7A2881F813B0500B4BB86 /* ProfileVC.swift in Sources */,
 				A3E92F0A1F92CF4A006508B6 /* Order.swift in Sources */,
+				A3E4597F1F9CDA8C003058AE /* AddressService.swift in Sources */,
+				A3E4597D1F9CD825003058AE /* AddressCell.swift in Sources */,
 				A36EABD81F927698007DA6D2 /* LoginVC.swift in Sources */,
 				A3E2266C1F92A7DC003FE7D9 /* AuthService.swift in Sources */,
 				A3E459791F9C0A46003058AE /* WeakTimer.swift in Sources */,
