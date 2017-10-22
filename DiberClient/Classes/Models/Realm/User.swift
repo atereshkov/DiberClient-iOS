@@ -51,13 +51,16 @@ extension User {
         let enabled = data["enabled"] as? Bool ?? false
         let fullname = data["fullname"] as? String ?? ""
         
-        var roles = [Role]()
+        // TODO: role works incorrectly now in database realm (duplicates)
+        let roles = [Role]()
+        /*
         if let rolesData = data["roles"] as? [[String: Any]] {
             for dataRole in rolesData {
                 guard let userRole = Role.with(data: dataRole) else { return nil }
                 roles.append(userRole)
             }
         }
+        */
         
         return User(id: id, email: email, username: username, password: password, enabled: enabled, fullname: fullname, roles: roles)
     }

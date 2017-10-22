@@ -11,11 +11,16 @@ import RealmSwift
 
 class Role: RealmObject {
     
+    private(set) dynamic var uuid = UUID().uuidString
     private(set) dynamic var name: String = ""
     
     convenience init(name: String) {
         self.init()
         self.name = name
+    }
+    
+    override static func primaryKey() -> String? {
+        return "uuid"
     }
     
 }
