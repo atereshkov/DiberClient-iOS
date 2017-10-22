@@ -6,7 +6,7 @@
 //  Copyright © 2017 Alexander Tereshkov. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
 
 class OrderView {
     
@@ -50,6 +50,18 @@ extension OrderView {
         let courier = order.courier
         
         return OrderView(id: id, date: date, descr: descr, price: price, status: status, addressFrom: addressFrom, addressTo: addressTo, courier: courier, customer: customer)
+    }
+    
+    class func from(orders: Results<Order>) -> [OrderView] {
+        var ordersDVO = [OrderView]()
+        
+        for orderDBO in orders {
+            if let order = OrderView.create(from: orderDBO) {
+                ordersDVO.append(order)
+            }
+        }
+        
+        return ordersDVO
     }
     
 }

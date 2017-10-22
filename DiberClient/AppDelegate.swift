@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Setup EXPLogger
         LogManager.shared.initialize()
+        
+        // Realm
+        Realm.Configuration.defaultConfiguration.deleteRealmIfMigrationNeeded = true
+        LogManager.log.info("[Realm] URL: \(String(describing: Realm.Configuration.defaultConfiguration.fileURL))")
         
         return true
     }

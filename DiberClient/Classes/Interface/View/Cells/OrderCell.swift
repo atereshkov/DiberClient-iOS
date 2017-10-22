@@ -30,7 +30,7 @@ class OrderCell: UITableViewCell {
     
     //MARK:- Public
     
-    public func bind(with item: Order) {
+    public func bind(with item: OrderView) {
         label.text = "\(item.id) | \(item.date)"
     }
     

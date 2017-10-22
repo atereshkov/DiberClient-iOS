@@ -68,11 +68,8 @@ class OrdersVC: UIViewController {
     
     // MARK: Helpers
     
-    // TODO Use OrderView instead of Order Realm Model
     private func setup(_ orders: [Order]) {
-        if let ordersTableVC = self.ordersTableVC {
-            ordersTableVC.orders = orders
-        }
+        DataManager.shared.save(orders: orders)
     }
 
 }

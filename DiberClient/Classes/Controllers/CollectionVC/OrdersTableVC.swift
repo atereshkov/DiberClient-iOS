@@ -7,22 +7,59 @@
 //
 
 import UIKit
+import RealmSwift
 
 class OrdersTableVC: UITableViewController {
     
-    var orders = [Order]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    fileprivate var ordersChangedNotification: NotificationToken? = nil
+    
+    // Orders from Realm database
+    fileprivate var ordersDBO: Results<Order> = DataManager.shared.getOrders()
+    fileprivate var debounceTimer: WeakTimer?
+    
+    fileprivate var orders = [OrderView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        registerNotifications()
     }
     
     deinit {
+        debounceTimer?.invalidate()
+        ordersChangedNotification?.stop()
         LogManager.log.info("Deinitialization")
     }
+    
+    // MARK: Private
+    
+    fileprivate func registerNotifications() {
+        guard !DataManager.shared.isInWriteTransaction else { return }
+        ordersChangedNotification?.stop()
+        ordersChangedNotification = ordersDBO.addNotificationBlock { [weak self] (changes) in
+            guard let _self = self else { return }
+            switch changes {
+            case .initial:
+                _self.reloadOrdersDebounced()
+            case .update(_, _, _, _):
+                _self.reloadOrdersDebounced()
+            case .error(let error):
+                LogManager.log.error("Failed to update fetch results: \(error)")
+            }
+        }
+    }
+    
+    fileprivate func reloadOrdersDebounced() {
+        debounceTimer?.invalidate()
+        debounceTimer = WeakTimer(timeInterval: 0.05, target: self, selector: #selector(reloadOrders), repeats: false)
+    }
+    
+    @objc fileprivate func reloadOrders() {
+        self.orders = OrderView.from(orders: ordersDBO)
+        self.tableView.reloadData()
+    }
+    
+    // MARK: TableView
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Cells.orders.rawValue, for: indexPath)

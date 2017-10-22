@@ -76,4 +76,10 @@ extension DataManager {
         return realm.objects(Order.self).filter("identity == \(identity)").first
     }
     
+    func save(orders: [Order]) {
+        for order in orders {
+            DataManager.shared.save(object: order)
+        }
+    }
+    
 }
