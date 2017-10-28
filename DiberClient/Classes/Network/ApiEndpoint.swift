@@ -10,7 +10,7 @@ import Foundation
 
 enum ApiEndpoint: String {
     
-    case base = "https://pacific-forest-76418.herokuapp.com/"
+    case base = "https://diber-backend.herokuapp.com/"
     case apiVersion = "api/v1/"
     
     case auth = "oauth/token"
