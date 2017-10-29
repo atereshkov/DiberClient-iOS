@@ -21,7 +21,8 @@ class AddressService: NSObject {
     }
     
     func getAddresses(callback:((_ result: UserAddressesResult) -> ())? = nil) {
-        let url = ApiEndpoint.userAddresses.url()
+        let userId = PreferenceManager.shared.userId
+        let url = AddressEndpoint.addresses(userId: userId).url
         
         sessionManager.request(url)
             .validate()

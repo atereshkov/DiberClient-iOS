@@ -26,7 +26,7 @@ class OAuth2Handler: RequestAdapter, RequestRetrier {
     
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
-        if (urlRequest.url?.absoluteString.contains(ApiEndpoint.auth.rawValue))! {
+        if (urlRequest.url?.absoluteString.contains(Endpoint.auth.rawValue))! {
             urlRequest.setValue(NetworkConstant.authorizationValue, forHTTPHeaderField: NetworkConstant.headerAuthorization)
         } else {
             urlRequest.setValue("Bearer \(PreferenceManager.shared.token)", forHTTPHeaderField: NetworkConstant.headerAuthorization)
@@ -61,7 +61,7 @@ class OAuth2Handler: RequestAdapter, RequestRetrier {
         guard !isRefreshing else { return }
         isRefreshing = true
         
-        let url = ApiEndpoint.auth.url()
+        let url = Endpoint.auth.url()
         
         let params: [String: String] = [
             NetworkConstant.grantType: NetworkConstant.refreshToken,

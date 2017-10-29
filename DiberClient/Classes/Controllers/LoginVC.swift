@@ -67,7 +67,7 @@ class LoginVC: UIViewController {
             switch result {
             case .Success(_):
                 PreferenceManager.shared.name = login
-                self_.performSegue(withIdentifier: Segues.mainScreen.rawValue, sender: self)
+                self_.getUserInfo()
             case .UnexpectedError(let error):
                 self_.showUnexpectedErrorAlert(error: error)
                 break
@@ -77,6 +77,32 @@ class LoginVC: UIViewController {
             case .InvalidCredentials:
                 // TODO
                 self_.showMessageErrorAlert(message: "Incorrect password")
+                break
+            }
+        }
+    }
+    
+    private func getUserInfo() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        UserService.shared.getUserInfo() { [weak self] (result) in
+            guard let self_ = self else {
+                return
+            }
+            
+            defer {
+                MBProgressHUD.hide(for: self_.view, animated: true)
+            }
+            
+            switch result {
+            case .Success(let user):
+                PreferenceManager.shared.userId = user.id
+                self_.performSegue(withIdentifier: Segues.mainScreen.rawValue, sender: self)
+            case .UnexpectedError(let error):
+                self_.showUnexpectedErrorAlert(error: error)
+                break
+            case .OfflineError:
+                self_.showOfflineErrorAlert()
                 break
             }
         }

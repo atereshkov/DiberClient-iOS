@@ -21,7 +21,8 @@ class OrderService: NSObject {
     }
     
     func getOrders(callback:((_ result: UserOrdersResult) -> ())? = nil) {
-        let url = ApiEndpoint.userOrders.url()
+        let userId = PreferenceManager.shared.userId
+        let url = OrderEndpoint.orders(userId: userId).url
         
         sessionManager.request(url)
             .validate()

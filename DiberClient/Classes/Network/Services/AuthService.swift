@@ -22,16 +22,11 @@ class AuthService: NSObject {
     }
     
     func getToken(login: String, password: String, callback:((_ result: AuthResult) -> ())? = nil) {
-        let url = ApiEndpoint.auth.url()
+        let url = AuthEndpoint.auth(login: login, password: password).url
+        let method = AuthEndpoint.auth(login: login, password: password).method
+        let params = AuthEndpoint.auth(login: login, password: password).parameters
         
-        let params: [String: String] = [
-            NetworkConstant.grantType: NetworkConstant.password,
-            NetworkConstant.clientId: NetworkConstant.clientIdValue,
-            "username": login,
-            "password": password
-        ]
-        
-        sessionManager.request(url, method: .post, parameters: params)
+        sessionManager.request(url, method: method, parameters: params)
             .responseJSON {(response) in
                 if let result = response.result.value as? [String: Any] {
                     if let accessToken = result["access_token"] as? String, let refreshToken = result["refresh_token"] as? String {

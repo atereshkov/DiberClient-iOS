@@ -8,19 +8,17 @@
 
 import Foundation
 
-enum ApiEndpoint: String {
+enum Endpoint: String {
     
     case base = "https://diber-backend.herokuapp.com/"
     case apiVersion = "api/v1/"
     
     case auth = "oauth/token"
     case userInfo = "users/info"
-    case userOrders = "users/2/orders"
-    case userAddresses = "users/2/addresses"
     
     func url(queryParams: [String: String]? = nil) -> String {
-        let authUrl = "\(ApiEndpoint.base.rawValue)\(self.rawValue)"
-        let commonUrl = "\(ApiEndpoint.base.rawValue)\(ApiEndpoint.apiVersion.rawValue)\(self.rawValue)"
+        let authUrl = "\(Endpoint.base.rawValue)\(self.rawValue)"
+        let commonUrl = "\(Endpoint.base.rawValue)\(Endpoint.apiVersion.rawValue)\(self.rawValue)"
         var url = self == .auth ? authUrl : commonUrl
         
         if let queryParams = queryParams {
@@ -36,4 +34,5 @@ enum ApiEndpoint: String {
         }
         return url
     }
+    
 }

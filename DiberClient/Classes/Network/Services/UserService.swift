@@ -21,7 +21,7 @@ class UserService: NSObject {
     }
     
     func getUserInfo(callback:((_ result: UserInfoResult) -> ())? = nil) {
-        let url = ApiEndpoint.userInfo.url()
+        let url = AuthEndpoint.userInfo.url
         
         sessionManager.request(url)
             .validate()

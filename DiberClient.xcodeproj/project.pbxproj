@@ -25,9 +25,13 @@
 		A37C13E61F8A482F00BFF747 /* OAuth2Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C13E51F8A482F00BFF747 /* OAuth2Handler.swift */; };
 		A37C13E91F8A486700BFF747 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C13E81F8A486700BFF747 /* PreferenceManager.swift */; };
 		A37C13EB1F8A488300BFF747 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C13EA1F8A488300BFF747 /* ReachabilityManager.swift */; };
-		A37C13ED1F8A49C200BFF747 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C13EC1F8A49C200BFF747 /* ApiEndpoint.swift */; };
+		A37C13ED1F8A49C200BFF747 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C13EC1F8A49C200BFF747 /* Endpoint.swift */; };
 		A38EA3141F93837A0088A112 /* OrdersTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38EA3131F93837A0088A112 /* OrdersTableVC.swift */; };
 		A38EA3171F938AEA0088A112 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38EA3161F938AEA0088A112 /* LogManager.swift */; };
+		A3BFC3AB1FA61060004154F5 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BFC3AA1FA61060004154F5 /* AuthEndpoint.swift */; };
+		A3BFC3AD1FA6124B004154F5 /* BaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BFC3AC1FA6124B004154F5 /* BaseEndpoint.swift */; };
+		A3BFC3B01FA62448004154F5 /* OrderEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BFC3AF1FA62448004154F5 /* OrderEndpoint.swift */; };
+		A3BFC3B21FA62451004154F5 /* AddressEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BFC3B11FA62451004154F5 /* AddressEndpoint.swift */; };
 		A3D7A2581F81314B00B4BB86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A2571F81314B00B4BB86 /* AppDelegate.swift */; };
 		A3D7A25A1F81314B00B4BB86 /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A2591F81314B00B4BB86 /* OrdersVC.swift */; };
 		A3D7A25C1F81314B00B4BB86 /* AddressesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7A25B1F81314B00B4BB86 /* AddressesVC.swift */; };
@@ -91,9 +95,13 @@
 		A37C13E51F8A482F00BFF747 /* OAuth2Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Handler.swift; sourceTree = "<group>"; };
 		A37C13E81F8A486700BFF747 /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
 		A37C13EA1F8A488300BFF747 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
-		A37C13EC1F8A49C200BFF747 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		A37C13EC1F8A49C200BFF747 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A38EA3131F93837A0088A112 /* OrdersTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableVC.swift; sourceTree = "<group>"; };
 		A38EA3161F938AEA0088A112 /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		A3BFC3AA1FA61060004154F5 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
+		A3BFC3AC1FA6124B004154F5 /* BaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEndpoint.swift; sourceTree = "<group>"; };
+		A3BFC3AF1FA62448004154F5 /* OrderEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderEndpoint.swift; sourceTree = "<group>"; };
+		A3BFC3B11FA62451004154F5 /* AddressEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressEndpoint.swift; sourceTree = "<group>"; };
 		A3D7A2541F81314B00B4BB86 /* DiberClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiberClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D7A2571F81314B00B4BB86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3D7A2591F81314B00B4BB86 /* OrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
@@ -210,10 +218,10 @@
 		A37C13E11F8A2B3200BFF747 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A3BFC3A91FA6101E004154F5 /* Api */,
 				A37C13E41F8A481100BFF747 /* Services */,
 				A37C13E51F8A482F00BFF747 /* OAuth2Handler.swift */,
 				A37C13E21F8A480700BFF747 /* NetworkManager.swift */,
-				A37C13EC1F8A49C200BFF747 /* ApiEndpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -256,6 +264,18 @@
 				A3E4597C1F9CD825003058AE /* AddressCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A3BFC3A91FA6101E004154F5 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				A3BFC3AC1FA6124B004154F5 /* BaseEndpoint.swift */,
+				A37C13EC1F8A49C200BFF747 /* Endpoint.swift */,
+				A3BFC3AA1FA61060004154F5 /* AuthEndpoint.swift */,
+				A3BFC3AF1FA62448004154F5 /* OrderEndpoint.swift */,
+				A3BFC3B11FA62451004154F5 /* AddressEndpoint.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		A3D7A24B1F81314B00B4BB86 = {
@@ -709,20 +729,23 @@
 				A38EA3171F938AEA0088A112 /* LogManager.swift in Sources */,
 				A3D7A2581F81314B00B4BB86 /* AppDelegate.swift in Sources */,
 				A3E92F0C1F92CF55006508B6 /* Role.swift in Sources */,
+				A3BFC3B21FA62451004154F5 /* AddressEndpoint.swift in Sources */,
 				A31A461F1F9BB38200271116 /* Realm.swift in Sources */,
 				A3E2266E1F92B189003FE7D9 /* AlertControllerHelper.swift in Sources */,
 				A3E226701F92C630003FE7D9 /* OrderService.swift in Sources */,
+				A3BFC3AB1FA61060004154F5 /* AuthEndpoint.swift in Sources */,
 				A3E226771F92CAEA003FE7D9 /* LocalRealmObject.swift in Sources */,
 				A37C13E31F8A480700BFF747 /* NetworkManager.swift in Sources */,
 				A37C13EB1F8A488300BFF747 /* ReachabilityManager.swift in Sources */,
 				A3E92F0E1F92CF5F006508B6 /* User.swift in Sources */,
+				A3BFC3AD1FA6124B004154F5 /* BaseEndpoint.swift in Sources */,
 				A32183151F936F2400897BC4 /* Address.swift in Sources */,
 				A3E2266A1F92A1DE003FE7D9 /* Constants.swift in Sources */,
 				A321830F1F93583400897BC4 /* OrderCell.swift in Sources */,
 				A36EABDF1F929EBB007DA6D2 /* String.swift in Sources */,
 				A3E4597B1F9CD697003058AE /* AddressesTableVC.swift in Sources */,
 				A37C13E91F8A486700BFF747 /* PreferenceManager.swift in Sources */,
-				A37C13ED1F8A49C200BFF747 /* ApiEndpoint.swift in Sources */,
+				A37C13ED1F8A49C200BFF747 /* Endpoint.swift in Sources */,
 				A31A461C1F9BAE2300271116 /* DataManager.swift in Sources */,
 				A3D7A2881F813B0500B4BB86 /* ProfileVC.swift in Sources */,
 				A3E92F0A1F92CF4A006508B6 /* Order.swift in Sources */,
@@ -730,6 +753,7 @@
 				A3E4597D1F9CD825003058AE /* AddressCell.swift in Sources */,
 				A36EABD81F927698007DA6D2 /* LoginVC.swift in Sources */,
 				A3E2266C1F92A7DC003FE7D9 /* AuthService.swift in Sources */,
+				A3BFC3B01FA62448004154F5 /* OrderEndpoint.swift in Sources */,
 				A3E459791F9C0A46003058AE /* WeakTimer.swift in Sources */,
 				A31A461A1F9B61BC00271116 /* MainNavigationVC.swift in Sources */,
 				A3D7A25A1F81314B00B4BB86 /* OrdersVC.swift in Sources */,
