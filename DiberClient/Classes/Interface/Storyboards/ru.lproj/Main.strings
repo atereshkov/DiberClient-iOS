@@ -1,0 +1,30 @@
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "13m-eO-USv"; */
+"13m-eO-USv.title" = "Profile";
+
+/* Class = "UINavigationItem"; title = "Tab Bar"; ObjectID = "G1o-nF-sek"; */
+"G1o-nF-sek.title" = "Tab Bar";
+
+/* Class = "UITabBarItem"; title = "Orders"; ObjectID = "X54-YY-HMK"; */
+"X54-YY-HMK.title" = "Orders";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "Xef-vt-JQ7"; */
+"Xef-vt-JQ7.text" = "Profile";
+
+/* Class = "UITabBarItem"; title = "Orders"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Orders";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bwk-bW-g9y"; */
+"bwk-bW-g9y.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Addresses"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Addresses";
+
+/* Class = "UITabBarItem"; title = "Addresses"; ObjectID = "cpz-um-jQG"; */
+"cpz-um-jQG.title" = "Addresses";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "ppZ-xj-GN3"; */
+"ppZ-xj-GN3.title" = "Profile";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zqQ-SS-pec"; */
+"zqQ-SS-pec.text" = "Label";
