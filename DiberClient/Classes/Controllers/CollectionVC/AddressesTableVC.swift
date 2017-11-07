@@ -25,7 +25,7 @@ class AddressesTableVC: UITableViewController {
     
     deinit {
         debounceTimer?.invalidate()
-        addressesChangedNotification?.stop()
+        addressesChangedNotification?.invalidate()
         LogManager.log.info("Deinitialization")
     }
     
@@ -33,8 +33,8 @@ class AddressesTableVC: UITableViewController {
     
     fileprivate func registerNotifications() {
         guard !DataManager.shared.isInWriteTransaction else { return }
-        addressesChangedNotification?.stop()
-        addressesChangedNotification = addressesDBO.addNotificationBlock { [weak self] (changes) in
+        addressesChangedNotification?.invalidate()
+        addressesChangedNotification = addressesDBO.observe { [weak self] (changes) in
             guard let _self = self else { return }
             switch changes {
             case .initial:

@@ -25,7 +25,7 @@ class OrdersTableVC: UITableViewController {
     
     deinit {
         debounceTimer?.invalidate()
-        ordersChangedNotification?.stop()
+        ordersChangedNotification?.invalidate()
         LogManager.log.info("Deinitialization")
     }
     
@@ -33,8 +33,8 @@ class OrdersTableVC: UITableViewController {
     
     fileprivate func registerNotifications() {
         guard !DataManager.shared.isInWriteTransaction else { return }
-        ordersChangedNotification?.stop()
-        ordersChangedNotification = ordersDBO.addNotificationBlock { [weak self] (changes) in
+        ordersChangedNotification?.invalidate()
+        ordersChangedNotification = ordersDBO.observe { [weak self] (changes) in
             guard let _self = self else { return }
             switch changes {
             case .initial:

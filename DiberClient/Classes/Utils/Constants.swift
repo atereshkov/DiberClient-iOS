@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 enum Segues: String {
     case mainScreen = "MainScreen"
